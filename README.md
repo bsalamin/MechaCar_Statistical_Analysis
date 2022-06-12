@@ -37,28 +37,43 @@ Within the total population are 3 manufacturing lots of suspension coils. The va
 <img width="491" alt="lot_summary" src="https://user-images.githubusercontent.com/100387078/173199649-48cc4fd1-0b48-4dc1-8275-ee37beab9de5.png">
 
 ## T-Tests on Suspension Coils
+The t-test for all manufacturing lots combined produced a p-value of 0.06, which is greater than the threshold of 0.05 needed to accept the alternative hypothesis. So, we fail to reject the null hypothesis that the mean PSI of the combined manufacturing lots is significantly different than 1500 PSI.
 
-### Population, Mu = 1500 PSI
+The test for each manufacturing lot produced p-values of 1 and 0.607 for lots 1 and 2, respectively. Again, we fail to reject the null hypothesis that the mean PSI for manufacturing lots are different than the population mean of 1500 PSI.
 
+However, the t-test for manufacturing lot 3 produced a p-value of 0.0416, which is less than our confidence level of 0.05, meaning we reject the null hypothesis and accept the alternative hypothesis: the mean suspension coil PSI in manufacturing lot 3 is statistically different than the population mean of 1500 PSI. 
 
-<img width="427" alt="ttest_pop" src="https://user-images.githubusercontent.com/100387078/173199676-12ea1f6a-32fc-4728-a780-960b483e8428.png">
+### All Manufacturing Lots
 
-### Manufacturing Lot 1
+<img width="405" alt="ttest_pop" src="https://user-images.githubusercontent.com/100387078/173249909-bced93c6-1a3c-45ec-a2ba-97a7ddeb9051.png">
 
+### Manufacturing Lots
 
-<img width="806" alt="ttest_lot1" src="https://user-images.githubusercontent.com/100387078/173199682-e56a0737-53d4-4aae-a05e-e9638507f8c8.png">
-
-### Manufacturing Lot 2
-
-
-<img width="801" alt="ttest_lot2" src="https://user-images.githubusercontent.com/100387078/173199699-084b3e5f-9c37-4b1f-b904-a109aabd5697.png">
-
-### Manufacturing Lot 3
-
-
-<img width="802" alt="ttest_lot3" src="https://user-images.githubusercontent.com/100387078/173199704-ca30af87-20f8-4f05-8e01-f3f7d8d313b8.png">
+<img width="652" alt="ttest_lots" src="https://user-images.githubusercontent.com/100387078/173249916-a38047fb-df69-4cb1-b2c6-ac95fa04580b.png">
 
 ## Study Design: MechaCar vs Competition
+
+In a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers, we would quantify how the MechaCar performs against the competition in areas like cost-to-own, city/highway/combined fuel efficiency, horsepower and torque, maintenance cost, and safety rating.
+
+**Metrics:**
+* Manufacturer's Suggested Retail Price (MSRP)
+* Cost-to-own (maintenance costs, taxes and fees, insurance rates)
+* Power (hp) and torque (lb-ft)
+* Fuel efficieny (EPA ratings for city/highway/combined)
+* Safety rating (NHTSA)
+* Depreciation (3 and 5 yr average resale values)
+
+**Null hypothesis and alternative hypothesis:**
+
+The null hypothesis would be that MechaCar vehicles does not differ from the population mean of the above metrics for competitors' vehicles. The alternative hypothesis would be that the metrics for MechaCar vehicles, on average, have a statistically significant difference from other manufacturers' vehicles.
+
+**Statistical test:**
+
+A multiple linear regression would be used in order to determine correlation and outcome predictability amongst the various factors that indicated MechaCar vehicle's safety, quality, economy, and performance against the competition from other manufacturers.
+
+**Data:**
+
+Data would need to be sourced from MechaCar and its competitors on factors like price, vehicle type/design and performance, as well as other parties like the EPA (fuel efficiency), the NHTSA (safety ratings), and third-party car dealers (depreciation/residual value of used vehicles).
 
 
 
